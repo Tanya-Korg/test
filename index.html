@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Формы</title>
+    </head>
+<body>
+    <form action="getform.php" method="get">
+        
+        <label>Город проживания<br>
+            <input type="text" id="city" name="city" value="kiev" placeholder="Введите город" required="required"> </label><br>
+        <label>
+            <input type="checkbox" name="politics" value="agreed" checked="checked">Я согласен с условиями<br></label>
+        <p>Национальность</p>
+        <label title="Украинец">
+            <input type="radio" name="nationality" value="ua" checked> Украинец<br>
+        </label>
+        <label title="Поляк">
+            <input type="radio" name="nationality" value="pl"> Поляк<br>
+        </label>
+        <label title="Беларус">
+            <input type="radio" name="nationality" value="by"> Беларус<br>
+        </label>
+        <label>
+            Домашние животные
+            <select name="pets" multiple size="4">
+               <option value="0">Нет</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+            </select>
+        </label>
+        <p>Ваш комментарий</p>
+            <textarea name="message" cols="20" rows="9" readonly>comment</textarea><br>
+        
+        <p>Введите возраст</p>
+            <input type="number" min="16" max="99" step="0.2">
+        <p>Дата рождения</p>
+            <input name="birth" type="date">
+        
+        <p>Выбор цвета</p>
+            <input name="color" type="color"><br>
+        <p>Почта</p>
+            <input type="email" reqired><br>
+        <p>Tel</p>
+            <input type="text" pattern="\+380[0-9]{9}"><br>
+        <p>Фото профиля</p>
+<input name="photo" type="file" multiple><br> <!--multiple = возможность выбрать несколько файлов -->
+        <p>Пароль</p>
+            <input type="password" placeholder="Введите пароль"><br>
+            <input type="hidden"><br>
+        
+            <input type="submit" value="Вступить">
+        
+        
+        
+    </form>
+    <p>get=открытая передача    post=скрытая передача<br>
+    textarea cols=ширина текстового поля в символах    rows=высота текстового поля в строках<br>
+        readonly=только чтение с возможностью редактирования disabled=без возможности редактирования(нерабочая кнопка)<br>
+        pattern=шаболн для ввода текстовой или числовой инф. без возможности отклонения, 
+        placeholder=текстовый шаблон (подсказка)
+    </p>
+
+</body>
+</html>
